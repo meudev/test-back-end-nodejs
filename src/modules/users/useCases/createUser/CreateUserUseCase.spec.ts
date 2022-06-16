@@ -15,7 +15,7 @@ describe("Create User", () => {
 
     it("should not be able to create an existing user", () => {
         const user: ICreateUserDTO = {
-            email: 'user@test.com',
+            email: "user@test.com",
             password: "1234",
             name: "User Test"
         };

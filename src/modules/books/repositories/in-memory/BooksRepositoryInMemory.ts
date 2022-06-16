@@ -47,7 +47,7 @@ class BooksRepositoryInMemory implements IBooksRepository {
     }
 
     async delete(id: string): Promise<void> {
-        this.books.filter((book) => book.id !== id);
+        await this.books.filter((book) => book.id !== id);
     }
 
 }

@@ -24,19 +24,15 @@ class BooksRepository implements IBooksRepository {
     }
 
     async findByTitle(title: string): Promise<Book> {
-        const book = await this.repository.findOne({ title });
-        return book;
+        return await this.repository.findOne({ title });
     }
 
     async findById(id: string): Promise<Book> {
-        const book = await this.repository.findOne(id);
-        return book;
+        return await this.repository.findOne(id);
     }
 
     async list(): Promise<Book[]> {
-        const books = await this.repository.find();
-
-        return books;
+        return await this.repository.find();
     }
 
     async edit({ title, description, category, id }: IEditBookDTO): Promise<void> {
